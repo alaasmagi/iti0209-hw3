@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactEcharts from "echarts-for-react";
 import type { YearData } from "../models/YeaData";
 
@@ -26,9 +26,9 @@ export default function GraduatesPerYearChart() {
     }
   },
   grid: {
-    left: "3%",
-    right: "4%",
-    bottom: "3%",
+    left: "1%",
+    right: "15%",
+    bottom: "0%",
     containLabel: true
   },
   xAxis: {

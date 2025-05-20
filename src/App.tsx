@@ -7,12 +7,12 @@ import LatestAcceptedPerFieldChart from './components/LatestAcceptedPerFieldChar
 function App() {
   return (
     <div className='flex-col'>
-      <h1 className='text-2xl font-bold'>Hariduslikud andmed</h1>
-      <div className='flex flex-row py-10'>
+      <h1 className='text-2xl text-white font-bold'>Hariduslikud andmed</h1>
+      <div className='flex flex-row py-20 gap-15'>
         <AcceptedPerYearChart/>
         <GraduatesPerYearChart/>  
       </div>
-      <div className='flex flex-row py-10'>
+      <div className='flex flex-row py-15 gap-15'>
         <LatestAcceptedPerFieldChart />
         <LatestGraduatesPerFieldChart />
       </div>

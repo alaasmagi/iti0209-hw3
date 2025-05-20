@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactEcharts from "echarts-for-react";
 import type { YearData } from "../models/YeaData";
 
@@ -16,7 +16,7 @@ const option = {
     text: "Kõrgharidust alustanud tudengite arv aastate lõikes",
     left: "center",
     textStyle: {
-      color: "white"
+      color: "white",
     }
   },
   tooltip: {
@@ -26,9 +26,9 @@ const option = {
     }
   },
   grid: {
-    left: "3%",
-    right: "4%",
-    bottom: "3%",
+    left: "1%",
+    right: "15%",
+    bottom: "0%",
     containLabel: true
   },
   xAxis: {
