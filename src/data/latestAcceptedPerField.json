@@ -1,0 +1,12 @@
+[
+  { "field": "Haridus", "graduationRate": 1456 },
+  { "field": "Humanitaaria ja kunstid", "graduationRate": 1720 },
+  { "field": "Informatsiooni- ja kommunikatsioonitehnoloogiad", "graduationRate": 1424 },
+  { "field": "Loodusteadused, matemaatika ja statistika", "graduationRate": 973 },
+  { "field": "Põllumajandus, metsandus, kalandus ja veterinaaria", "graduationRate": 275 },
+  { "field": "Sotsiaalteadused, ajakirjandus ja teave", "graduationRate": 1056 },
+  { "field": "Teenindus", "graduationRate": 743 },
+  { "field": "Tehnika, tootmine ja ehitus", "graduationRate": 1952 },
+  { "field": "Tervis ja heaolu", "graduationRate": 1787 },
+  { "field": "Ärindus, haldus ja õigus", "graduationRate": 2608 }
+]
