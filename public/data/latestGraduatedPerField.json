@@ -1,0 +1,12 @@
+[
+  { "field": "Haridus", "rate": 928 },
+  { "field": "Humanitaaria ja kunstid", "rate": 1761 },
+  { "field": "Informatsiooni- ja kommunikatsioonitehnoloogiad", "rate": 1425 },
+  { "field": "Loodusteadused, matemaatika ja statistika", "rate": 612 },
+  { "field": "Põllumajandus, metsandus, kalandus ja veterinaaria", "rate": 813 },
+  { "field": "Sotsiaalteadused, ajakirjandus ja teave", "rate": 787 },
+  { "field": "Teenindus", "rate": 2732 },
+  { "field": "Tehnika, tootmine ja ehitus", "rate": 4285 },
+  { "field": "Tervis ja heaolu", "rate": 2238 },
+  { "field": "Ärindus, haldus ja õigus", "rate": 2676 }
+]
