@@ -5,7 +5,7 @@
   { "field": "Loodusteadused, matemaatika ja statistika", "rate": 973 },
   { "field": "Põllumajandus, metsandus, kalandus ja veterinaaria", "rate": 275 },
   { "field": "Sotsiaalteadused, ajakirjandus ja teave", "rate": 1056 },
-  { "field": "Teenindus", "graduaratetionRate": 743 },
+  { "field": "Teenindus", "rate": 743 },
   { "field": "Tehnika, tootmine ja ehitus", "rate": 1952 },
   { "field": "Tervis ja heaolu", "rate": 1787 },
   { "field": "Ärindus, haldus ja õigus", "rate": 2608 }
