@@ -13,7 +13,9 @@ export default function LatestAcceptedPerFieldChart() {
 
   const option = {
     title: {
-      text: "Õppeaastal 2023/24 kõrgharidust alustanud tudengid \n valdkondade kaupa",
+      text: "Õppeaastal 2023/24 kõrgharidust alustanud tudengid valdkondade kaupa 🔗",
+      link: "https://haridussilm.ee/ee/tasemeharidus/tasemeharidus/vastuvoetud",
+      target: "blank",
       left: "center",
       textStyle: {
         color: "white",
@@ -26,33 +28,30 @@ export default function LatestAcceptedPerFieldChart() {
       },
     },
     grid: {
-      left: "1%",
-      right: "15%",
-      bottom: "0%",
+      top: "15%",
+      left: "3%",
+      right: "10%",
+      bottom: "10%",
       containLabel: true,
     },
     xAxis: {
-      type: "category",
-      data: data.map((d) => d.field),
-      axisLabel: {
-        interval: 0,
-        rotate: 30,
-        color: "white",
-        formatter: function (value: string) {
-          return value.length > 10 ? value.slice(0, 10) + "…" : value;
-        },
-      },
-      name: "Valdkond",
-      nameTextStyle: {
-        color: "white",
-      },
-    },
-    yAxis: {
       type: "value",
       name: "Alustajate arv",
       axisLabel: {
         color: "white",
       },
+      nameTextStyle: {
+        color: "white",
+      },
+    },
+    yAxis: {
+      type: "category",
+      data: data.map((d) => d.field),
+      axisLabel: {
+        interval: 0,
+        color: "white",
+      },
+      name: "Valdkond",
       nameTextStyle: {
         color: "white",
       },
@@ -63,20 +62,32 @@ export default function LatestAcceptedPerFieldChart() {
         type: "bar",
         data: data.map((d) => d.rate),
         itemStyle: {
-          color: "#5470C6",
+          color: "#0496FF",
         },
         emphasis: {
           itemStyle: {
-            color: "#2f4554",
+            color: "#52B7FF",
           },
+        },
+      },
+    ],
+    graphic: [
+      {
+        type: "text",
+        left: 0,
+        bottom: 0,
+        style: {
+          text: "ℹ️ Ülalolev graafik näitab 2023/24 õppeaastal kõrgharidust omandama asunud tudengite arvu valdkondade lõikes.",
+          fill: "lightgray",
+          font: "14px sans-serif",
         },
       },
     ],
   };
 
   return (
-    <div className="w-full">
-      <ReactEcharts option={option} />
+    <div className="w-full h-125 bg-main-dark rounded-3xl p-5">
+      <ReactEcharts option={option} style={{ height: "100%" }} />
     </div>
   );
 }

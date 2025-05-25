@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import ReactEcharts from "echarts-for-react";
 import type { YearData } from "../models/YeaData";
 
-export default function GraduatesPerYearChart() {
+export default function IctPopularityPerYearChart() {
   const [data, setData] = useState<YearData[]>([]);
 
   useEffect(() => {
-    fetch("/data/graduatesPerYear.json")
+    fetch("/data/ictPopularityPerYear.json")
       .then((res) => res.json())
       .then(setData);
   }, []);
 
   const option = {
     title: {
-      text: "Kõrghariduse lõpetanud tudengite arv aastate lõikes 🔗",
-      link: "https://haridussilm.ee/ee/tasemeharidus/tasemeharidus/lopetajad",
+      text: "Informatsiooni- ja kommunikatsioonitehnoloogia erialade populaarsus aastate lõikes 🔗",
+      link: "https://haridussilm.ee/ee/tasemeharidus/tasemeharidus/vastuvoetud",
       target: "blank",
       left: "center",
       textStyle: {
@@ -29,9 +29,9 @@ export default function GraduatesPerYearChart() {
     },
     grid: {
       top: "20%",
-      left: "0%",
+      left: "1%",
       right: "15%",
-      bottom: "15%",
+      bottom: "10%",
       containLabel: true,
     },
     xAxis: {
@@ -48,7 +48,7 @@ export default function GraduatesPerYearChart() {
     },
     yAxis: {
       type: "value",
-      name: "Lõpetajate arv",
+      name: "Alustajate arv",
       axisLabel: {
         color: "white",
       },
@@ -58,15 +58,21 @@ export default function GraduatesPerYearChart() {
     },
     series: [
       {
-        name: "Lõpetajate arv",
-        type: "bar",
+        name: "Alustajate arv",
+        type: "line",
         data: data.map((d) => d.rate),
+        smooth: true,
         itemStyle: {
+          color: "white",
+        },
+        symbolSize: 12,
+        lineStyle: {
           color: "#0496FF",
+          width: 4,
         },
         emphasis: {
           itemStyle: {
-            color: "#52B7FF",
+            color: "#2f4554",
           },
         },
       },
@@ -77,7 +83,7 @@ export default function GraduatesPerYearChart() {
         left: 0,
         bottom: 0,
         style: {
-          text: "ℹ️ Ülalolev graafik kajastab kõrghariduse lõpetanud tudengite arvu \naastate lõikes",
+          text: "ℹ️ Ülalolev graafik kajastab kõrghariduse IKT erialade populaarsust ning kujutab IKT erialadele õppima asuvate tudengite arvu muutust ajas.",
           fill: "lightgray",
           font: "14px sans-serif",
         },
@@ -86,7 +92,7 @@ export default function GraduatesPerYearChart() {
   };
 
   return (
-    <div className="w-full h-110 bg-main-dark rounded-3xl p-5">
+    <div className="w-full h-100 bg-main-dark rounded-3xl p-5">
       <ReactEcharts option={option} style={{ height: "100%" }} />
     </div>
   );
